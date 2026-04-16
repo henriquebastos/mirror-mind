@@ -47,7 +47,8 @@ cd mirror-mind
 uv sync
 
 # Set up your identity from the template
-cp -r users/me ~/.config/espelho/myname
+mkdir -p ~/.config/espelho/myname
+cp -r users/me/* ~/.config/espelho/myname
 
 # Set up environment variables
 cp .env.example .env
@@ -113,22 +114,22 @@ Just talk. The mirror will route to the right persona automatically based on you
 
 ## Commands
 
-| Command | What it does |
-|---------|-------------|
-| `/mm-mirror` | Activates mirror mode — loads identity, persona, attachments and responds as you |
-| `/mm-consult` | Consults other LLMs via OpenRouter with mirror context |
-| `/mm-journey` | Status of active journeys |
-| `/mm-journeys` | Quick list of all journeys |
-| `/mm-memories` | List stored memories (insights, ideas, decisions) |
-| `/mm-tasks` | Task management by journey |
-| `/mm-week` | Weekly planning (ingest free-form text or view week) |
-| `/mm-journal` | Record a personal journal entry |
-| `/mm-save` | Export current conversation to Markdown |
-| `/mm-backup` | Backup the memory database |
-| `/mm-seed` | Migrate YAMLs to the memory bank |
-| `/mm-mute` | Toggle conversation recording (for testing) |
-| `/mm-new` | Start a new conversation |
-| `/mm-help` | List available commands |
+| Command        | What it does                                                                     |
+| -------------- | -------------------------------------------------------------------------------- |
+| `/mm-mirror`   | Activates mirror mode — loads identity, persona, attachments and responds as you |
+| `/mm-consult`  | Consults other LLMs via OpenRouter with mirror context                           |
+| `/mm-journey`  | Status of active journeys                                                        |
+| `/mm-journeys` | Quick list of all journeys                                                       |
+| `/mm-memories` | List stored memories (insights, ideas, decisions)                                |
+| `/mm-tasks`    | Task management by journey                                                       |
+| `/mm-week`     | Weekly planning (ingest free-form text or view week)                             |
+| `/mm-journal`  | Record a personal journal entry                                                  |
+| `/mm-save`     | Export current conversation to Markdown                                          |
+| `/mm-backup`   | Backup the memory database                                                       |
+| `/mm-seed`     | Migrate YAMLs to the memory bank                                                 |
+| `/mm-mute`     | Toggle conversation recording (for testing)                                      |
+| `/mm-new`      | Start a new conversation                                                         |
+| `/mm-help`     | List available commands                                                          |
 
 ## Architecture
 
@@ -151,6 +152,7 @@ A **travessia** (Portuguese for "crossing" or "passage") is any ongoing arc wher
 - A creative endeavor (a podcast series, a course)
 
 Each travessia has:
+
 - **Identity** — what it is, why it matters, what stage it's in
 - **Caminho** (path) — a living status document, updated as things evolve
 - **Memories** — insights, decisions, and ideas extracted from conversations
