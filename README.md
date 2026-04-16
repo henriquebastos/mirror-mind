@@ -32,7 +32,7 @@ Personas are not separate entities — they are specialized lenses the ego activ
 
 ## Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or [pi](https://github.com/mariozechner/coding-agent)
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or [pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent)
 - Python 3.10+
 - [uv](https://docs.astral.sh/uv/) (Python package manager)
 
