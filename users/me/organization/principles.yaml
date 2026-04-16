@@ -1,0 +1,10 @@
+# Organização — Princípios
+# Princípios que guiam sua atuação profissional.
+# Se seus princípios estão em self/soul.yaml, referencie aqui.
+
+version: "1.0.0"
+
+principles: |
+  Descreva os princípios que guiam seu trabalho e suas decisões
+  profissionais. Podem ser os mesmos de self/soul.yaml ou específicos
+  do contexto organizacional.

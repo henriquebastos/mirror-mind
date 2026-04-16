@@ -1,0 +1,20 @@
+# config.yaml
+# Configuração central — modelo default e briefing do espelho.
+
+id: espelho
+name: "Espelho"
+version: "1.0.0"
+default_model: anthropic/claude-opus-4
+
+description: >
+  Segundo cérebro pessoal. Extensão digital que organiza, lembra,
+  investiga, escreve e conecta — capturando ativamente insights,
+  eventos, pendências e atividades das conversas.
+
+briefing: >
+  Descreva quem você é em 2-3 frases. Cargo, projetos, família,
+  momento de vida. Isso é o contexto mínimo que o espelho carrega
+  em toda interação.
+
+# Modelo default. Outros modelos apenas quando obviamente superior.
+# subscription: claude_max

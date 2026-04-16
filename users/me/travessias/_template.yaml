@@ -1,0 +1,29 @@
+# Template de Travessia
+# Travessias são jornadas de vida — arcos que você está percorrendo.
+# Copie este template para criar uma nova travessia.
+#
+# Após criar, execute: uv run python -m memoria.seed --env production
+#
+# Para consultar no espelho: /mm-journey <slug>
+
+travessia_id: minha-travessia
+name: Minha Travessia
+status: active  # active, paused, completed, archived
+version: "1.0.0"
+
+description: >
+  Descrição breve da travessia — o que é e para que serve.
+
+briefing: >
+  Contexto operacional: fase atual, objetivos imediatos,
+  o que o espelho precisa saber para ajudar.
+
+context: |
+  # Contexto Completo
+
+  Informações detalhadas sobre a travessia:
+
+  - Estado atual e próximos passos
+  - Decisões já tomadas
+  - Pessoas envolvidas
+  - Referências e links relevantes

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>h5 { margin-bottom: 0.5em; } h5 + p { margin-top: 0; }</style>
+</head>
+<body>
+
+<h2>X Digest — 13 abr 2026</h2>
+<p><small>10h–19h BRT · 390 tweets · ~50 relevantes</small></p>
+
+<ol>
+<li><a href="https://ampcode.com/notes/how-to-build-an-agent">How to Build an Agent</a> — Thorsten Ball, Amp</li>
+<li><a href="https://www.youtube.com/watch?v=5KnCKadxSPY">Latent Space × Stay SaaSy</a> — 57 min, token budgets, code review culture</li>
+<li><a href="https://blog.cloudflare.com/durable-object-facets-dynamic-workers/">Durable Object Facets</a> — Kenton Varda, Cloudflare</li>
+<li><a href="https://rng.md/posts/saturate-cpus-with-yes/">Use yes to reproduce flaky tests</a> — criccomini</li>
+<li><a href="https://x.com/salar/status/2036757873204617226">A love letter to pi</a> — Lucas Meijer, Pi a partir de 13:00</li>
+<li><a href="https://github.com/earendil-works/pi-website">earendil-works/pi-website</a> — Pi migra de org</li>
+</ol>
+
+<hr>
+
+<h3>Pi / Earendil</h3>
+
+<h5><a href="https://x.com/badlogicgames">@badlogicgames</a> at <a href="https://x.com/badlogicgames/status/2043757368571310405">13 abr, 15:02</a> · <i>pi, governance, earendil</i></h5>
+<p><strong>Pi está migrando para a organização @earendilworks no GitHub.</strong> O website já está em <a href="https://github.com/earendil-works/pi-website">earendil-works/pi-website</a>. Mario postou um RFC no Discord e a comunidade aprovou. Daniel Miessler elogiou o writeup como "the new standard for such communications."</p>
+
+<h5><a href="https://x.com/badlogicgames">@badlogicgames</a> at <a href="https://x.com/badlogicgames">13 abr, 11:26</a> · <i>pi, strategy</i></h5>
+<p>"I want Anthropic to have no moat." — Pi como contraponto provider-agnostic by design.</p>
+
+<h5><a href="https://x.com/lucasmeijer">@lucasmeijer</a> at <a href="https://x.com/salar/status/2036757873204617226">13 abr, 07:10</a> · <i>pi, talk</i></h5>
+<p><strong>Talk: "A love letter to pi"</strong> — what works and what doesn't using AI to write better software faster. Pi-specific content starts at <a href="https://x.com/salar/status/2036757873204617226">13:00</a>.</p>
+
+<h5><a href="https://x.com/SergDort">@SergDort</a> at <a href="https://x.com/SergDort">13 abr, 13:36</a> · <i>pi, adoption</i></h5>
+<p>"Been using Pi for few days now. Don't see a reason to comeback to Claude or Codex. The minimalistic setup is so nice. And so extensible that you can build any workflow imaginable."</p>
+
+<h5><a href="https://x.com/0xcgn">@0xcgn</a> at <a href="https://x.com/0xcgn">13 abr, 10:33</a> · <i>pi, skills</i></h5>
+<p>Using Pi barebones with browser, GitHub, Linear, plan & review skills + cmux/qmd for UI elements.</p>
+
+<h3>Artigo: "How to Build an Agent"</h3>
+
+<h5><a href="https://x.com/thorstenball">@thorstenball</a> at <a href="https://x.com/thorstenball">13 abr, 14:18</a> + <a href="https://x.com/bradyjeong">@bradyjeong</a> at <a href="https://x.com/bradyjeong">13 abr, 14:48</a> · <i>agents, tutorial, amp</i></h5>
+<p><a href="https://ampcode.com/notes/how-to-build-an-agent">ampcode.com/notes/how-to-build-an-agent</a></p>
+
+<p>There's no secret behind coding agents. It's an LLM, a loop, and enough tokens. The article builds a fully functional code-editing agent in under 400 lines of Go, step by step:</p>
+<ul>
+<li>Basic chatbot with Anthropic SDK (90 lines)</li>
+<li>Tool use via API: read_file, list_files, edit_file — the model returns JSON describing the tool call, you execute, return the result</li>
+<li>The agentic loop: LLM requests tool → execute → return result → repeat until done</li>
+<li>System prompt that shapes behavior</li>
+</ul>
+<p>The modern tool use API is just a structured version of "wink if you want me to raise my arm." The real complexity in Claude Code, Codex, Amp, Pi is polish, not architecture.</p>
+<p><strong>Worth reading in full. 30 min to understand the foundation of every coding agent.</strong></p>
+
+<h3>Podcast: Latent Space × Stay SaaSy</h3>
+
+<h5><a href="https://x.com/latentspacepod">@latentspacepod</a> at <a href="https://x.com/latentspacepod">13 abr, 15:56</a> · <i>management, AI adoption, token budgets</i></h5>
+<p><a href="https://www.youtube.com/watch?v=5KnCKadxSPY">YouTube, 57 min</a> — "The best engineers don't write the most code. They delete the most code."</p>
+
+<p>Core thesis: 2026 is the year token budgets become the new headcount budget. The shift from fixed pricing to consumption will create the biggest management challenge of the decade.</p>
+
+<ul>
+<li><strong>Token budgets as individual cost</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=240">4:00</a>): Imagine if each employee's laptop cost between $500 and $50,000/year depending on usage. An OpenAI engineer spends ~1 billion tokens/day (~$2.5M/year). Fully loaded cost of an engineer will include token budget as a primary component.</li>
+<li><strong>Build vs Buy recalibrated</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=1140">19:00</a>): AI makes building cheaper, but mature software is still more complex than it looks. Heuristic: if you can replace it with a spreadsheet, build it. If not, think twice.</li>
+<li><strong>Automate executives, not juniors</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=1740">29:00</a>): 99% of leadership decisions are "knowable" and standardizable. The top of the org tree may be more automatable than the leaves.</li>
+<li><strong>HITL burnout</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=2640">44:00</a>): Running 10 simultaneous agents is viable but exhausting. When a critical PR arrives at end of day, the reviewer is cognitively depleted. Real risk to reliability.</li>
+<li><strong>Amazon went down 6h from vibe-coded change</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=2640">44:00</a>): If Amazon can't maintain code review culture under AI shipping pressure, nobody is immune.</li>
+<li><strong>Future of PRs</strong> (<a href="https://www.youtube.com/watch?v=5KnCKadxSPY&t=2940">49:00</a>): Either review goes 100% automated, or the industry will need something like pilot fatigue limits before reviewing critical code.</li>
+</ul>
+
+<h3>Cloudflare Agents Week</h3>
+
+<p><a href="https://x.com/whoiskatrin">@whoiskatrin</a>, <a href="https://x.com/KentonVarda">@KentonVarda</a>, <a href="https://x.com/elithrar">@elithrar</a>, <a href="https://x.com/MattieTK">@MattieTK</a> · 13 abr · <i>cloudflare, agents, infra</i></p>
+
+<ul>
+<li><strong>Sandboxes GA:</strong> Agents get a real computer — terminal, interpreter, live preview URLs, secure credentials. Sleeps when idle, wakes on demand.</li>
+<li><strong>Durable Object Facets:</strong> New primitive that gives AI-generated code running in a sandbox its own SQLite database. Supervisor controls access — can limit, log, bill. Zero latency (local disk). <a href="https://blog.cloudflare.com/durable-object-facets-dynamic-workers/">Article</a></li>
+<li><strong>Unified CLI cf:</strong> ~3,000 API operations via CLI, with schema per endpoint and built-in agent context. <code>npx cf</code> to try.</li>
+<li><strong>Local Explorer:</strong> Browser UI to inspect/edit KV, R2, D1, Durable Objects locally. Good feedback loop for agents.</li>
+</ul>
+<p>Cloudflare positioning Workers as the standard runtime for agents in production. Durable Object Facets is elegant — SQLite per sandbox with no container overhead.</p>
+
+<h3>Agentes, Harnesses & Orquestração</h3>
+
+<h5><a href="https://x.com/sydneyrunkle">@sydneyrunkle</a> at <a href="https://x.com/sydneyrunkle">13 abr, 16:03</a> · <i>deepagents, guardrails, production</i></h5>
+<p>Two new primitives for agents in production: (1) Middleware hooks around the agent loop for retries, errors, PII redaction. (2) Declarative allow/deny rules for files agents can read but never overwrite.</p>
+
+<h5><a href="https://x.com/GeoffreyHuntley">@GeoffreyHuntley</a> at <a href="https://x.com/GeoffreyHuntley">13 abr, 16:19</a> · <i>agents, wasm</i></h5>
+<p>"Asking an agent orchestrator to just generate and run wasm/wat bytecode works shockingly well." — instead of tool calls, the agent generates WebAssembly directly.</p>
+
+<h5><a href="https://x.com/nicoalbanese10">@nicoalbanese10</a> at <a href="https://x.com/nicoalbanese10">13 abr, 15:13</a> · <i>open source, agents, cloud</i></h5>
+<p><strong>Open Agents:</strong> Open source cloud coding agent. "3 months ago I started building a coding agent that runs in the cloud. It's since written every line of code I've shipped, including itself."</p>
+
+<h5><a href="https://x.com/dexhorthy">@dexhorthy</a> at <a href="https://x.com/dexhorthy">13 abr, 12:06</a> · <i>context engineering, streaming</i></h5>
+<p>"Imagine you learned 12-factor context engineering a year ago and could confidently skip all this 'harness' hype and get back to work." Also: streaming as the lowest hanging fruit in agent systems — makes apps feel infinitely more responsive.</p>
+
+<h5><a href="https://x.com/Vtrivedy10">@Vtrivedy10</a> at <a href="https://x.com/Vtrivedy10">13 abr, 14:44</a> · <i>cursor, harness design</i></h5>
+<p>Cursor invests heavily in harness design with tool/context design specific to each model. They validate changes with data — it's harness engineering, not just prompt engineering.</p>
+
+<h5><a href="https://x.com/vaibcode">@vaibcode</a> at <a href="https://x.com/vaibcode">13 abr, 12:27</a> · <i>rust, agents, DX</i></h5>
+<p>Rust's cargo test is horrible for agents — runs 1 package at a time, output tail isn't a complete test summary. Agent always thinks it needs to rerun.</p>
+
+<h5><a href="https://x.com/lucasmeijer">@lucasmeijer</a> at <a href="https://x.com/lucasmeijer">13 abr, 08:08</a> · <i>agents, design</i></h5>
+<p>"Agents always want to add. It's low risk. We need systems that push back. That remove. That combine, that simplify."</p>
+
+<h5><a href="https://x.com/fseixas">@fseixas</a> at <a href="https://x.com/fseixas">13 abr, 07:57</a> · <i>google, agents</i></h5>
+<p>Google está desenvolvendo <strong>Jitro</strong> (sucessor do Jules): agent de código que não espera prompts detalhados. Tu define o objetivo alto nível ("melhorar cobertura de testes") e ele decide sozinho as mudanças.</p>
+
+<h5><a href="https://x.com/mitchellbosley">@mitchellbosley</a> at <a href="https://x.com/mitchellbosley">13 abr, 11:22</a> · <i>agents, research</i></h5>
+<p>Harness learning as "higher order policy for agentic systems" — the operative question is how to efficiently translate traces into this higher order policy.</p>
+
+<h3>Claude vs Codex vs OpenCode</h3>
+
+<h5><a href="https://x.com/alex_prompter">@alex_prompter</a> at <a href="https://x.com/alex_prompter">13 abr, 07:10</a> · <i>claude, nerf, data</i></h5>
+<p><strong>"Claude got nerfed"</strong> — AMD's AI director analyzed 6,852 Claude Code sessions, 234,760 tool calls, and 17,871 thinking blocks. Conclusion: thinking depth dropped 67%, code reads before edits dropped significantly.</p>
+
+<h5><a href="https://x.com/AkitaOnRails">@AkitaOnRails</a> at <a href="https://x.com/AkitaOnRails">13 abr, 14:57</a> · <i>claude, codex, comparison</i></h5>
+<p>Claude vs Codex na prática: "Desleal e promíscuo. Hoje gosto mais do Claude Code. Basta a OpenAI melhorar o harness do Codex que migro no mesmo dia." GPT 5.4 xhigh melhor pra problemas que exigem pesquisa/teste A/B. Claude mais disciplinado mas menos criativo. Problema do Codex: interromper pausa a task anterior sem aviso.</p>
+
+<h5><a href="https://x.com/thdxr">@thdxr</a> at <a href="https://x.com/thdxr">13 abr, 14:04</a> · <i>opencode, growth</i></h5>
+<p>OpenCode Go ($10/mo) growing faster than providers are receiving GPUs. Entire team focused on securing capacity.</p>
+
+<h5><a href="https://x.com/Starwatcher_vc">@Starwatcher_vc</a> at <a href="https://x.com/Starwatcher_vc">13 abr, 12:25</a> · <i>pricing, comparison</i></h5>
+<p>"$100 plan on Codex and $100 plan on Claude code are two very different plans based on pure volume of work one can do."</p>
+
+<h5><a href="https://x.com/bentlegen">@bentlegen</a> at <a href="https://x.com/bentlegen">13 abr, 09:39</a> + <a href="https://x.com/richardrx">@richardrx</a> at <a href="https://x.com/richardrx">13 abr, 07:27</a> · <i>anthropic, platform risk</i></h5>
+<p><strong>"Anthropic is like Amazon now"</strong> — can look at platform numbers and decide which products to replicate. Lovable used Claude as its engine; Anthropic has more data about Lovable's users than Lovable does. "Stripe sendo comido pelo Lovable e o Lovable sendo comido pelo Anthropic."</p>
+
+<h5><a href="https://x.com/kunchenguid">@kunchenguid</a> at <a href="https://x.com/kunchenguid">13 abr, 08:16</a> · <i>claude, config</i></h5>
+<p>Settings pra estabilizar Claude Code em ~/.claude/settings.json — thread com snippet e explicação pra quem sentiu degradação.</p>
+
+<h3>Ferramentas & Open Source</h3>
+
+<h5><a href="https://x.com/indragie">@indragie</a> at <a href="https://x.com/indragie">13 abr, 14:14</a> · <i>macOS, github, filesystem</i></h5>
+<p><strong>GHFS:</strong> Virtual read-only filesystem for macOS that mounts GitHub repos locally. Point agents at a mount directory where all repos are available and automatically cloned on-demand.</p>
+
+<h5><a href="https://x.com/jerryjliu0">@jerryjliu0</a> at <a href="https://x.com/jerryjliu0">13 abr, 15:34</a> · <i>benchmark, OCR, agents</i></h5>
+<p><strong>ParseBench:</strong> First open source document OCR benchmark for the agentic era. Measures parsing quality specifically for agent knowledge work.</p>
+
+<h5><a href="https://x.com/gortron">@gortron</a> at <a href="https://x.com/gortron">13 abr, 10:57</a> · <i>search, S3, open source</i></h5>
+<p><strong>Firn:</strong> Open source vector + full-text search on S3, inspired by turbopuffer. foyer (RAM/NVMe cache) + LanceDB (S3-native) + axum REST API.</p>
+
+<h5><a href="https://x.com/neural_avb">@neural_avb</a> at <a href="https://x.com/neural_avb">13 abr, 15:06</a> · <i>jupyter, terminal, open source</i></h5>
+<p><strong>notebook-tui:</strong> Run Jupyter notebooks from terminal, render animated MP4. opentui + ipykernel + remotion + vim motions. <a href="https://github.com/avbiswas/notebook-tui">GitHub</a></p>
+
+<h5><a href="https://x.com/vincent_koc">@vincent_koc</a> at <a href="https://x.com/vincent_koc">13 abr, 09:55</a> · <i>openclaw, release</i></h5>
+<p><strong>OpenClaw 2026.4.12:</strong> Stability fixes, audio transcription, better chat/TTS/WhatsApp, memory/plugin/cron/subagent fixes, LM Studio integration, native Codex provider. <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.12">Release notes</a></p>
+
+<h5><a href="https://x.com/wesmckinn">@wesmckinn</a> at <a href="https://x.com/wesmckinn">13 abr, 11:43</a> · <i>dev tools, cost tracking</i></h5>
+<p><strong>AgentsView 0.22.0:</strong> Token usage & cost dashboard + ccusage CLI replacement. <a href="https://www.agentsview.io/token-usage/">Site</a></p>
+
+<h3>Engenharia de Software</h3>
+
+<h5><a href="https://x.com/simonw">@simonw</a> at <a href="https://x.com/simonw">13 abr, 11:27</a> · <i>code quality, agents</i></h5>
+<p>"I'm getting better quality code because if I spot a tedious minor improvement — a slight readability tweak that needs me to update code in 20+ places — I tell the coding agent to do it, costs me nothing. Previously I would have made a tradeoff decision on whether the minor improvement was worth ~30+ minutes of my time and often decided it wasn't."</p>
+
+<h5><a href="https://x.com/AkitaOnRails">@AkitaOnRails</a> at <a href="https://x.com/AkitaOnRails">13 abr, 09:32</a> · <i>security, claude code, malware</i></h5>
+<p><strong>Claude Code leak → malware:</strong> Código do Claude Code vazou, mirrors apareceram no GitHub, criminosos injetaram malware nos releases. Pessoas baixaram e executaram. "Que tipo de idiota baixa release de um mirror de leak e roda na própria máquina?"</p>
+
+<h5><a href="https://x.com/Steve_Yegge">@Steve_Yegge</a> at <a href="https://x.com/Steve_Yegge">13 abr, 15:10</a> · <i>AI adoption, google</i></h5>
+<p>"Google engineering has the same AI adoption footprint as John Deere, the tractor company."</p>
+
+<h5><a href="https://x.com/Pirat_Nation">@Pirat_Nation</a> at <a href="https://x.com/Pirat_Nation">13 abr, 08:42</a> · <i>linux, AI code policy</i></h5>
+<p>Linux define regras claras pra código AI-generated: ferramentas como Copilot permitidas, mas "AI slop" não será aceito. "Humans take responsibility."</p>
+
+<h5><a href="https://x.com/airkatakana">@airkatakana</a> at <a href="https://x.com/airkatakana">13 abr, 14:24</a> · <i>gemini, WTF</i></h5>
+<p>gemini-cli has a headless mode (meant for automated scripts), but if you actually use it Google cuts you off for "automated queries." Yes, that is the point. Even while paying.</p>
+
+<h5><a href="https://x.com/criccomini">@criccomini</a> at <a href="https://x.com/criccomini">13 abr, 11:49</a> · <i>testing, debug, TIL</i></h5>
+<p><strong>Trick: use yes to saturate CPU and reproduce flaky tests.</strong> <code>yes > /dev/null &</code> in a loop saturates cores. Combined with a loop helper that reruns the test until failure, reproduces race conditions that only appear in CI. <a href="https://rng.md/posts/saturate-cpus-with-yes/">Article</a></p>
+
+<h5><a href="https://x.com/bcherny">@bcherny</a> at <a href="https://x.com/bcherny">13 abr, 12:39</a> · <i>anthropic, caching, costs</i></h5>
+<p>Prompt cache de 1h é nuançado: custa mais pra writes, menos pra reads. Se beneficia depende do padrão de uso — tamanho do context window, se é agent principal ou subagent. Anthropic iterando ativamente.</p>
+
+<h3>Reflexões</h3>
+
+<h5><a href="https://x.com/IntuitMachine">@IntuitMachine</a> at <a href="https://x.com/IntuitMachine">13 abr, 14:59</a> · <i>HITL, burnout</i></h5>
+<p>"AI can reduce execution work while dramatically increasing judgment work. And judgment work is what fries people fastest. HITL burnout is real."</p>
+
+<h5><a href="https://x.com/dillon_mulroy">@dillon_mulroy</a> at <a href="https://x.com/dillon_mulroy">13 abr, 11:41</a> · <i>agents, thinking</i></h5>
+<p>"Harness subagents make it too easy to offload thinking."</p>
+
+<hr>
+
+<p><small>Gerado pelo Espelho · xurl · timeline de @henriquebastos<br>
+13 abr 2026, 10:10–19:19 UTC · ~390 tweets</small></p>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Organização — Identidade
+# Se você trabalha para uma organização ou tem empresas, descreva aqui.
+# Se o espelho serve só a você (sem organização separada), diga isso.
+
+version: "1.0.0"
+
+identity: |
+  Descreva sua relação com organizações:
+
+  - Você é a organização? (freelancer, solopreneur)
+  - Trabalha para uma empresa? Qual o papel?
+  - Tem empresas próprias? Quais e para que servem?
+
+  Isso ajuda o espelho a contextualizar decisões profissionais.

@@ -1,0 +1,44 @@
+# Usuário — Identidade
+# Seu perfil completo. Quanto mais detalhado, melhor o espelho te conhece.
+
+version: "1.0.0"
+
+user: |
+  # [Seu Nome]
+
+  **Nome:**
+  **Nascimento:**
+  **Mora em:**
+  **Estado civil:**
+
+  ## Datas importantes
+
+  Liste aniversários, datas de casamento, marcos pessoais.
+
+  ## Família
+
+  Descreva sua família — cônjuge, filhos, pais, irmãos. Não só nomes,
+  mas como cada um funciona e como a dinâmica opera.
+
+  ## Trajetória Profissional
+
+  Conte sua história profissional — não o currículo, mas o arco narrativo.
+
+  ## Perfil Psicométrico
+
+  Se tiver resultados de DISC, Big Five, MBTI ou similares, referencie
+  os arquivos aqui:
+  - Detalhes em `user/disc.yaml`, `user/big5.yaml`, etc.
+
+  ## Jornada Interior
+
+  Terapia, momentos transformadores, crenças, filosofia de vida.
+
+  ## Como funciona no dia-a-dia
+
+  O que adora, o que detesta, no que é bom, no que é ruim.
+
+  ## Pessoas importantes
+
+  Liste as pessoas-chave da sua vida com contexto suficiente
+  para o espelho saber quem são quando aparecerem nas conversas.

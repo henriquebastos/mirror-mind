@@ -1,0 +1,27 @@
+# Template de Persona
+# Personas são lentes especializadas que o espelho ativa conforme o contexto.
+# Copie este template para criar uma nova persona.
+#
+# Após criar, execute: uv run python -m memoria.seed --env production
+
+persona_id: minha-persona
+name: Minha Persona
+version: "1.0.0"
+default_model: anthropic/claude-opus-4
+inherit: ego  # ego (comportamento) ou self (alma completa)
+
+routing:
+  - palavra-chave-1
+  - palavra-chave-2
+  - tema-que-ativa-esta-persona
+
+description: >
+  Descrição breve: quando esta persona é ativada e que profundidade
+  ela adiciona à resposta do ego.
+
+system_prompt: |
+  Instruções específicas para quando esta lente está ativa.
+  Descreva:
+  - Que conhecimento especializado esta persona tem
+  - Como ela deve abordar os temas do seu domínio
+  - Que tom ou profundidade ela adiciona
